@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CENTRO EDUCATIVO</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <h1>CENTRO DE EDUCACION</h1>
+
+    <div class="container">
+
+        <!--Botones para que el usuario elija lo que desea hacer-->
+        <button id="darAlta">Dar De Alta</button> 
+        <button id="darBaja">Dar de Baja</button>
+        <button id="imprimir">Impresion de Informacion</button>
+
+        <!--Este formulario se activa cuando se presiona el boton DAR DE ALTA-->
+        <form action="" id="alta" autocomplete="off">
+            <label for="nombre">Nombre</label>   <!--Para ingresar el nombre de la persona a crear-->
+            <input type="text" name="nombre" id="nombre">
+            <label for="apellido">Apellido</label>   <!--Para ingresar el apellido de la persona a crear-->
+            <input type="text" name="apellido" id="apellido">
+            <label for="dni">DNI</label>   <!--Para ingresar el DNI de la persona a crear-->
+            <input type="text" name="dni" id="dni">
+            <select name="estado_civil" id="estado_civil">   <!--Para ingresar el estado civil de la persona a crear-->
+                <option value="" hidden>Estado Civil</option>
+                <option value="soltero">Soltero</option>
+                <option value="casado">Casado</option>
+                <option value="viudo">Viudo</option>
+            </select>
+            <select name="rol" id="rol">   <!--Para ingresar el rol de la persona a crear-->
+                <option value="" hidden>Rol</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Profesor">Profesor</option>
+                <option value="PersonalServicio">Personal De Servicio</option>
+            </select>
+        <select name="curso" id="curso" hidden>   <!--Se activa cuando el rol es Estudiante-->
+            <option value="" hidden>Curso</option>
+            <option value="1ro 1ra">1° 1°</option>
+            <option value="1ro 2da">1° 2°</option>
+            <option value="2do 1ra">2° 1°</option>
+            <option value="2do 2da">2° 2°</option>
+            <option value="3ro 1ra">3° 1°</option>
+            <option value="3ro 2da">3° 2°</option>
+            <option value="4to 1ra">4° 1°</option>
+            <option value="4to 2da">4° 2°</option>
+            <option value="5to 1ra">5° 1°</option>
+            <option value="5to 2da">5° 2°</option>
+        </select>
+        <select name="departamento" id="departamento" hidden>   <!--Se activa cuando el rol es Profesor-->
+            <option value="" hidden>Departamento</option>
+            <option value="matematica">Matematica</option>
+            <option value="ingles">Ingles</option>
+            <option value="biologia">Biologia</option>
+            <option value="filosofia">Filosofia</option>
+            <option value="informática">Informática</option>
+        </select>
+        <select name="seccion" id="seccion" hidden> <!--Se activa cuando el rol es Personal de Servicio-->
+            <option value="" hidden>Sección</option>
+            <option value="dirección">Direccion</option>
+            <option value="secretaria">Secretaria</option>
+            <option value="preceptoria">Preceptoria</option>
+            <option value="maestranza">Maestranza</option>       
+        </select>
+        <input type="button" id="aceptar" value="Aceptar">
+    </form>
+    </div>
+
+    <script type="module" src="./main.js"></script> <!--Se usa type module porque se uso modularizacion-->
+    
+</body>
+</html>
